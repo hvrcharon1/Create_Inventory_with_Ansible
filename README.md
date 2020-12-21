@@ -3,7 +3,7 @@ Create_Inventory_with_Ansible
 
 This role is used to create inventory file from the list of target nodes. Which can be directly imported into Xcel Sheets. Contains the details of the form:
 
-![alt text](https://github.com/hvrcharon1/Create_Inventory_with_Ansible/blob/master/AnsibleInventory.png)
+![alt text](https://github.com/hvrcharon1/Create_Inventory_with_Ansible/master/AnsibleInventory.png)
 
 
 Requirements
