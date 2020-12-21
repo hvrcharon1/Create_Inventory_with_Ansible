@@ -1,0 +1,4 @@
+---
+# vars file for create_inventory
+#inventory_location: /data
+#inventory_filename: Inventory

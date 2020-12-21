@@ -1,0 +1,14 @@
+---
+# tasks file for create_inventory
+- name: Placing Inventory File
+  template:
+    src: "templates/inventory.j2"
+    dest: "{{ inventory_location }}/{{ inventory_filename }}"
+  delegate_to: localhost
+- name: Generating Inventory
+  lineinfile:
+    dest: "{{ inventory_location }}/{{ inventory_filename }}"
+    line: "{{ ansible_hostname }}	{{ inventory_hostname}}	{{ ansible_architecture }}	{{ ansible_os_family }}	{{ ansible_kernel }}	{{ ansible_default_ipv4.address }}	{{ ansible_memtotal_mb }}	{{ ansible_processor_vcpus }}	{{ ansible_virtualization_type }}"
+    insertbefore: "^Ansible Generated Inventory by Harshal Rasal"
+    state: "present"
+  delegate_to: localhost
